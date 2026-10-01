@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SoundPass - deine Tickets für unvergessliche Konzerte.">
+  <title>SoundPass | Konzerttickets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="SoundPass Startseite">
+      <span class="logo-mark">♪</span>
+      Sound<span>Pass</span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#events">Events</a>
+      <a href="#events">Kategorien</a>
+      <a href="#vorteile">Vorteile</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <label class="global-search">
+      <span class="sr-only">Konzerte suchen</span>
+      <input id="event-search" type="search" placeholder="Artist, Venue oder Stadt suchen" autocomplete="off">
+      <span aria-hidden="true">⌕</span>
+    </label>
+    <button class="header-button account-button" type="button">Mein Konto <span>↗</span></button>
+    <button class="header-button cart-button" type="button" aria-label="Warenkorb öffnen">Warenkorb <span class="cart-count">0</span> <span>↗</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> Deine Musik. Dein Moment.</p>
+        <h1>Live-Musik, die<br><em>bleibt.</em></h1>
+        <p class="hero-text">Sichere dir jetzt Tickets für die besten Konzerte und erlebe deine Lieblingskünstler hautnah.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#events">Events ansehen <span>↓</span></a>
+          <a class="text-link" href="#vorteile">Warum SoundPass? <span>→</span></a>
+        </div>
+        <div class="social-proof">
+          <div class="avatar-stack" aria-hidden="true">
+            <span>J</span><span>M</span><span>L</span><span>+</span>
+          </div>
+          <p><strong>12.000+</strong><br>Musikfans sind dabei</p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Abstrakte Illustration einer Konzertbühne">
+        <div class="sun-glow"></div>
+        <div class="hero-circle circle-one"></div>
+        <div class="hero-circle circle-two"></div>
+        <div class="hero-ticket">
+          <span class="ticket-label">SOUND<br>PASS</span>
+          <span class="ticket-star">✦</span>
+          <span class="ticket-date">LIVE / 2026</span>
+        </div>
+        <div class="floating-note note-one">♫</div>
+        <div class="floating-note note-two">♪</div>
+        <div class="art-caption"><span></span> Feel the sound</div>
+      </div>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Bald auf deiner Playlist</p>
+          <h2>Unsere <em>Top-Events</em></h2>
+        </div>
+        <p class="section-intro">30 Abende. Unendlich viele<br>Erinnerungen.</p>
+      </div>
+      <div class="event-controls">
+        <div class="category-menu" role="group" aria-label="Musik-Kategorien">
+          <button class="category-button active" type="button" data-category="Alle">Alle</button>
+          <button class="category-button" type="button" data-category="Pop">Pop</button>
+          <button class="category-button" type="button" data-category="Rock">Rock</button>
+          <button class="category-button" type="button" data-category="Elektronisch">Elektronisch</button>
+          <button class="category-button" type="button" data-category="Jazz">Jazz</button>
+          <button class="category-button" type="button" data-category="Hip-Hop">Hip-Hop</button>
+          <button class="category-button" type="button" data-category="Metal">Metal</button>
+          <button class="category-button" type="button" data-category="Folk">Folk</button>
+          <button class="category-button" type="button" data-category="Klassik">Klassik</button>
+          <button class="category-button" type="button" data-category="Reggae">Reggae</button>
+        </div>
+        <label class="sort-control">Sortieren:
+          <select id="sort-events" aria-label="Events sortieren">
+            <option value="date">Nach Datum</option>
+            <option value="name">Nach Bandnamen</option>
+          </select>
+        </label>
+      </div>
+      <div class="event-grid">
+        <article class="event-card" data-category="Rock" data-band="Neon Nights" data-date="2026-07-18">
+          <div class="event-image image-purple">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Lichtshow bei einem Rockkonzert">
+            <span class="event-tag">Bestseller</span>
+            <span class="event-symbol">✦</span>
+            <span class="event-date-large">18<br><small>JUL</small></span>
+          </div>
+          <div class="event-info">
+            <p class="event-type">Indie / Alternative</p>
+            <h3><button class="act-link" type="button" data-details="Neon Nights">Neon Nights</button></h3>
+            <p class="event-location">⌖ Gasometer, Wien · 20:00 Uhr</p>
+            <div class="event-footer">
+              <strong>ab 49,90 €</strong>
+              <button class="buy-button" type="button" data-event="Neon Nights" data-price="49,90 €">Kaufen <span>→</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card featured-card" data-category="Elektronisch" data-band="Electric Summer" data-date="2026-08-02">
+          <div class="event-image image-orange">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=800&q=80" alt="Publikum bei einem elektronischen Festival">
+            <span class="event-tag">Nur noch wenige</span>
+            <span class="event-symbol sun-symbol">☼</span>
+            <span class="event-date-large">02<br><small>AUG</small></span>
+          </div>
+          <div class="event-info">
+            <p class="event-type">Pop / Dance</p>
+            <h3><button class="act-link" type="button" data-details="Electric Summer">Electric Summer</button></h3>
+            <p class="event-location">⌖ Arena, Wien · 19:30 Uhr</p>
+            <div class="event-footer">
+              <strong>ab 59,90 €</strong>
+              <button class="buy-button" type="button" data-event="Electric Summer" data-price="59,90 €">Kaufen <span>→</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Pop" data-band="Midnight Groove" data-date="2026-09-14">
+          <div class="event-image image-blue">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Bühne bei einem Popkonzert">
+            <span class="event-tag">Neu</span>
+            <span class="event-symbol">✺</span>
+            <span class="event-date-large">14<br><small>SEP</small></span>
+          </div>
+          <div class="event-info">
+            <p class="event-type">Soul / R&amp;B</p>
+            <h3><button class="act-link" type="button" data-details="Midnight Groove">Midnight Groove</button></h3>
+            <p class="event-location">⌖ WUK, Wien · 21:00 Uhr</p>
+            <div class="event-footer">
+              <strong>ab 44,90 €</strong>
+              <button class="buy-button" type="button" data-event="Midnight Groove" data-price="44,90 €">Kaufen <span>→</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Jazz" data-band="Blue Note Society" data-date="2026-06-05">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80" alt="Jazzband auf der Bühne"><span class="event-tag">Neu</span><span class="event-symbol">✺</span><span class="event-date-large">05<br><small>JUN</small></span></div>
+          <div class="event-info"><p class="event-type">Jazz</p><h3><button class="act-link" type="button" data-details="Blue Note Society">Blue Note Society</button></h3><p class="event-location">⌖ Porgy &amp; Bess, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 39,90 €</strong><button class="buy-button" type="button" data-event="Blue Note Society" data-price="39,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Hip-Hop" data-band="City Rhymes" data-date="2026-06-12">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80" alt="Hip-Hop-Konzert mit Publikum"><span class="event-tag">Bestseller</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">12<br><small>JUN</small></span></div>
+          <div class="event-info"><p class="event-type">Hip-Hop / Rap</p><h3><button class="act-link" type="button" data-details="City Rhymes">City Rhymes</button></h3><p class="event-location">⌖ Gasometer, Wien · 19:30 Uhr</p><div class="event-footer"><strong>ab 42,90 €</strong><button class="buy-button" type="button" data-event="City Rhymes" data-price="42,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Metal" data-band="Iron Echo" data-date="2026-06-20">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" alt="Metal-Gitarrist im Scheinwerferlicht"><span class="event-tag">Nur noch wenige</span><span class="event-symbol">✦</span><span class="event-date-large">20<br><small>JUN</small></span></div>
+          <div class="event-info"><p class="event-type">Metal</p><h3><button class="act-link" type="button" data-details="Iron Echo">Iron Echo</button></h3><p class="event-location">⌖ Wiener Stadthalle · 20:00 Uhr</p><div class="event-footer"><strong>ab 54,90 €</strong><button class="buy-button" type="button" data-event="Iron Echo" data-price="54,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Folk" data-band="Wild Meadow" data-date="2026-06-27">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=800&q=80" alt="Folk-Musiker bei einem Open-Air"><span class="event-tag">Open Air</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">27<br><small>JUN</small></span></div>
+          <div class="event-info"><p class="event-type">Folk / Indie</p><h3><button class="act-link" type="button" data-details="Wild Meadow">Wild Meadow</button></h3><p class="event-location">⌖ Arena Open Air, Wien · 18:30 Uhr</p><div class="event-footer"><strong>ab 35,90 €</strong><button class="buy-button" type="button" data-event="Wild Meadow" data-price="35,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Klassik" data-band="Vienna Strings" data-date="2026-07-03">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" alt="Orchester bei einem Konzert"><span class="event-tag">Exklusiv</span><span class="event-symbol">✺</span><span class="event-date-large">03<br><small>JUL</small></span></div>
+          <div class="event-info"><p class="event-type">Klassik</p><h3><button class="act-link" type="button" data-details="Vienna Strings">Vienna Strings</button></h3><p class="event-location">⌖ Musikverein, Wien · 19:00 Uhr</p><div class="event-footer"><strong>ab 64,90 €</strong><button class="buy-button" type="button" data-event="Vienna Strings" data-price="64,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Reggae" data-band="Island Pulse" data-date="2026-07-10">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Reggae-Publikum bei Sonnenuntergang"><span class="event-tag">Good Vibes</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">10<br><small>JUL</small></span></div>
+          <div class="event-info"><p class="event-type">Reggae</p><h3><button class="act-link" type="button" data-details="Island Pulse">Island Pulse</button></h3><p class="event-location">⌖ Donauinsel, Wien · 18:00 Uhr</p><div class="event-footer"><strong>ab 38,90 €</strong><button class="buy-button" type="button" data-event="Island Pulse" data-price="38,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Pop" data-band="Crystal Hearts" data-date="2026-07-24">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Popkonzert mit bunten Lichtern"><span class="event-tag">Neu</span><span class="event-symbol">✦</span><span class="event-date-large">24<br><small>JUL</small></span></div>
+          <div class="event-info"><p class="event-type">Pop</p><h3><button class="act-link" type="button" data-details="Crystal Hearts">Crystal Hearts</button></h3><p class="event-location">⌖ Gasometer, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 47,90 €</strong><button class="buy-button" type="button" data-event="Crystal Hearts" data-price="47,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Rock" data-band="Thunder Avenue" data-date="2026-08-08">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80" alt="Rockband mit Gitarren"><span class="event-tag">Bestseller</span><span class="event-symbol">✦</span><span class="event-date-large">08<br><small>AUG</small></span></div>
+          <div class="event-info"><p class="event-type">Rock</p><h3><button class="act-link" type="button" data-details="Thunder Avenue">Thunder Avenue</button></h3><p class="event-location">⌖ Arena, Wien · 20:30 Uhr</p><div class="event-footer"><strong>ab 51,90 €</strong><button class="buy-button" type="button" data-event="Thunder Avenue" data-price="51,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Elektronisch" data-band="Neon Circuit" data-date="2026-08-15">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1571266028243-d220c9c3b67b?auto=format&fit=crop&w=800&q=80" alt="Elektronische Lichtshow"><span class="event-tag">Late Night</span><span class="event-symbol">✺</span><span class="event-date-large">15<br><small>AUG</small></span></div>
+          <div class="event-info"><p class="event-type">House / Techno</p><h3><button class="act-link" type="button" data-details="Neon Circuit">Neon Circuit</button></h3><p class="event-location">⌖ Flex, Wien · 22:00 Uhr</p><div class="event-footer"><strong>ab 32,90 €</strong><button class="buy-button" type="button" data-event="Neon Circuit" data-price="32,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Jazz" data-band="Velvet Keys" data-date="2026-08-21">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80" alt="Jazzpianist bei warmem Bühnenlicht"><span class="event-tag">Intim</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">21<br><small>AUG</small></span></div>
+          <div class="event-info"><p class="event-type">Jazz / Soul</p><h3><button class="act-link" type="button" data-details="Velvet Keys">Velvet Keys</button></h3><p class="event-location">⌖ Porgy &amp; Bess, Wien · 21:00 Uhr</p><div class="event-footer"><strong>ab 36,90 €</strong><button class="buy-button" type="button" data-event="Velvet Keys" data-price="36,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Hip-Hop" data-band="Golden Mic" data-date="2026-08-28">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=800&q=80" alt="Rapper mit Mikrofon auf der Bühne"><span class="event-tag">Bestseller</span><span class="event-symbol">✦</span><span class="event-date-large">28<br><small>AUG</small></span></div>
+          <div class="event-info"><p class="event-type">Hip-Hop / Rap</p><h3><button class="act-link" type="button" data-details="Golden Mic">Golden Mic</button></h3><p class="event-location">⌖ WUK, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 45,90 €</strong><button class="buy-button" type="button" data-event="Golden Mic" data-price="45,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Metal" data-band="Black Horizon" data-date="2026-09-04">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" alt="Metalband auf großer Bühne"><span class="event-tag">Laut &amp; live</span><span class="event-symbol">✺</span><span class="event-date-large">04<br><small>SEP</small></span></div>
+          <div class="event-info"><p class="event-type">Metal / Hard Rock</p><h3><button class="act-link" type="button" data-details="Black Horizon">Black Horizon</button></h3><p class="event-location">⌖ Wiener Stadthalle · 19:30 Uhr</p><div class="event-footer"><strong>ab 56,90 €</strong><button class="buy-button" type="button" data-event="Black Horizon" data-price="56,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Folk" data-band="Northbound" data-date="2026-09-11">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1468359601543-843bfaef291a?auto=format&fit=crop&w=800&q=80" alt="Folkband mit akustischen Instrumenten"><span class="event-tag">Akustisch</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">11<br><small>SEP</small></span></div>
+          <div class="event-info"><p class="event-type">Folk / Country</p><h3><button class="act-link" type="button" data-details="Northbound">Northbound</button></h3><p class="event-location">⌖ Szene, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 34,90 €</strong><button class="buy-button" type="button" data-event="Northbound" data-price="34,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Klassik" data-band="Luna Orchestra" data-date="2026-09-18">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" alt="Orchester mit Streichinstrumenten"><span class="event-tag">Highlight</span><span class="event-symbol">✦</span><span class="event-date-large">18<br><small>SEP</small></span></div>
+          <div class="event-info"><p class="event-type">Klassik / Crossover</p><h3><button class="act-link" type="button" data-details="Luna Orchestra">Luna Orchestra</button></h3><p class="event-location">⌖ Konzerthaus, Wien · 19:30 Uhr</p><div class="event-footer"><strong>ab 59,90 €</strong><button class="buy-button" type="button" data-event="Luna Orchestra" data-price="59,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Reggae" data-band="Roots Revival" data-date="2026-09-25">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Reggae-Konzert mit tanzendem Publikum"><span class="event-tag">Sommerklang</span><span class="event-symbol">✺</span><span class="event-date-large">25<br><small>SEP</small></span></div>
+          <div class="event-info"><p class="event-type">Reggae / Dub</p><h3><button class="act-link" type="button" data-details="Roots Revival">Roots Revival</button></h3><p class="event-location">⌖ WUK, Wien · 20:30 Uhr</p><div class="event-footer"><strong>ab 37,90 €</strong><button class="buy-button" type="button" data-event="Roots Revival" data-price="37,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Pop" data-band="Daydream Avenue" data-date="2026-10-02">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Popbühne mit Scheinwerfern"><span class="event-tag">Neu</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">02<br><small>OKT</small></span></div>
+          <div class="event-info"><p class="event-type">Pop / Indie</p><h3><button class="act-link" type="button" data-details="Daydream Avenue">Daydream Avenue</button></h3><p class="event-location">⌖ Arena, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 41,90 €</strong><button class="buy-button" type="button" data-event="Daydream Avenue" data-price="41,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Rock" data-band="Static Hearts" data-date="2026-10-09">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Rockkonzert mit hellem Gegenlicht"><span class="event-tag">Live-Favorit</span><span class="event-symbol">✦</span><span class="event-date-large">09<br><small>OKT</small></span></div>
+          <div class="event-info"><p class="event-type">Alternative Rock</p><h3><button class="act-link" type="button" data-details="Static Hearts">Static Hearts</button></h3><p class="event-location">⌖ Gasometer, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 48,90 €</strong><button class="buy-button" type="button" data-event="Static Hearts" data-price="48,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Elektronisch" data-band="Future Frequency" data-date="2026-10-16">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1571266028243-d220c9c3b67b?auto=format&fit=crop&w=800&q=80" alt="DJ vor elektronischer Lichtshow"><span class="event-tag">All Night</span><span class="event-symbol">✺</span><span class="event-date-large">16<br><small>OKT</small></span></div>
+          <div class="event-info"><p class="event-type">Electro / Ambient</p><h3><button class="act-link" type="button" data-details="Future Frequency">Future Frequency</button></h3><p class="event-location">⌖ Flex, Wien · 22:00 Uhr</p><div class="event-footer"><strong>ab 29,90 €</strong><button class="buy-button" type="button" data-event="Future Frequency" data-price="29,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Jazz" data-band="Satin Swing" data-date="2026-10-23">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80" alt="Swingband mit Blasinstrumenten"><span class="event-tag">Klassiker</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">23<br><small>OKT</small></span></div>
+          <div class="event-info"><p class="event-type">Jazz / Swing</p><h3><button class="act-link" type="button" data-details="Satin Swing">Satin Swing</button></h3><p class="event-location">⌖ Porgy &amp; Bess, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 40,90 €</strong><button class="buy-button" type="button" data-event="Satin Swing" data-price="40,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Hip-Hop" data-band="Fresh Verse" data-date="2026-10-30">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=800&q=80" alt="Hip-Hop-Act mit Mikrofon"><span class="event-tag">New School</span><span class="event-symbol">✦</span><span class="event-date-large">30<br><small>OKT</small></span></div>
+          <div class="event-info"><p class="event-type">Hip-Hop</p><h3><button class="act-link" type="button" data-details="Fresh Verse">Fresh Verse</button></h3><p class="event-location">⌖ WUK, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 39,90 €</strong><button class="buy-button" type="button" data-event="Fresh Verse" data-price="39,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Metal" data-band="Crimson Forge" data-date="2026-11-06">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" alt="Metalband im roten Bühnenlicht"><span class="event-tag">Heavy Night</span><span class="event-symbol">✺</span><span class="event-date-large">06<br><small>NOV</small></span></div>
+          <div class="event-info"><p class="event-type">Metalcore</p><h3><button class="act-link" type="button" data-details="Crimson Forge">Crimson Forge</button></h3><p class="event-location">⌖ Arena, Wien · 19:00 Uhr</p><div class="event-footer"><strong>ab 52,90 €</strong><button class="buy-button" type="button" data-event="Crimson Forge" data-price="52,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Folk" data-band="Golden Pines" data-date="2026-11-13">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1468359601543-843bfaef291a?auto=format&fit=crop&w=800&q=80" alt="Akustisches Konzert in warmer Atmosphäre"><span class="event-tag">Handgemacht</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">13<br><small>NOV</small></span></div>
+          <div class="event-info"><p class="event-type">Folk / Singer-Songwriter</p><h3><button class="act-link" type="button" data-details="Golden Pines">Golden Pines</button></h3><p class="event-location">⌖ Szene, Wien · 19:30 Uhr</p><div class="event-footer"><strong>ab 33,90 €</strong><button class="buy-button" type="button" data-event="Golden Pines" data-price="33,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Klassik" data-band="Nocturne Ensemble" data-date="2026-11-20">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" alt="Kammerensemble bei einem Konzert"><span class="event-tag">Nocturne</span><span class="event-symbol">✦</span><span class="event-date-large">20<br><small>NOV</small></span></div>
+          <div class="event-info"><p class="event-type">Klassik / Kammermusik</p><h3><button class="act-link" type="button" data-details="Nocturne Ensemble">Nocturne Ensemble</button></h3><p class="event-location">⌖ Musikverein, Wien · 19:00 Uhr</p><div class="event-footer"><strong>ab 55,90 €</strong><button class="buy-button" type="button" data-event="Nocturne Ensemble" data-price="55,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Reggae" data-band="Sunset Station" data-date="2026-11-27">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=800&q=80" alt="Open-Air-Konzert bei Sonnenuntergang"><span class="event-tag">Feel Good</span><span class="event-symbol">✺</span><span class="event-date-large">27<br><small>NOV</small></span></div>
+          <div class="event-info"><p class="event-type">Reggae / Ska</p><h3><button class="act-link" type="button" data-details="Sunset Station">Sunset Station</button></h3><p class="event-location">⌖ Flex, Wien · 20:30 Uhr</p><div class="event-footer"><strong>ab 36,90 €</strong><button class="buy-button" type="button" data-event="Sunset Station" data-price="36,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Pop" data-band="Silver Skyline" data-date="2026-12-04">
+          <div class="event-image image-orange"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Popact bei einer großen Show"><span class="event-tag">Finale</span><span class="event-symbol sun-symbol">☼</span><span class="event-date-large">04<br><small>DEZ</small></span></div>
+          <div class="event-info"><p class="event-type">Pop / Dance</p><h3><button class="act-link" type="button" data-details="Silver Skyline">Silver Skyline</button></h3><p class="event-location">⌖ Wiener Stadthalle · 20:00 Uhr</p><div class="event-footer"><strong>ab 49,90 €</strong><button class="buy-button" type="button" data-event="Silver Skyline" data-price="49,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Rock" data-band="Wildfire Club" data-date="2026-12-11">
+          <div class="event-image image-purple"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80" alt="Rockpublikum mit erhobenen Händen"><span class="event-tag">Jahresabschluss</span><span class="event-symbol">✦</span><span class="event-date-large">11<br><small>DEZ</small></span></div>
+          <div class="event-info"><p class="event-type">Rock / Blues</p><h3><button class="act-link" type="button" data-details="Wildfire Club">Wildfire Club</button></h3><p class="event-location">⌖ Gasometer, Wien · 20:00 Uhr</p><div class="event-footer"><strong>ab 46,90 €</strong><button class="buy-button" type="button" data-event="Wildfire Club" data-price="46,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+        <article class="event-card" data-category="Elektronisch" data-band="Pulse Factory" data-date="2026-12-18">
+          <div class="event-image image-blue"><img src="https://images.unsplash.com/photo-1571266028243-d220c9c3b67b?auto=format&fit=crop&w=800&q=80" alt="Elektronische Party mit bunten Lichtern"><span class="event-tag">Closing Party</span><span class="event-symbol">✺</span><span class="event-date-large">18<br><small>DEZ</small></span></div>
+          <div class="event-info"><p class="event-type">Techno / House</p><h3><button class="act-link" type="button" data-details="Pulse Factory">Pulse Factory</button></h3><p class="event-location">⌖ Grelle Forelle, Wien · 22:00 Uhr</p><div class="event-footer"><strong>ab 31,90 €</strong><button class="buy-button" type="button" data-event="Pulse Factory" data-price="31,90 €">Kaufen <span>→</span></button></div></div>
+        </article>
+      </div>
+      <div class="pagination" aria-label="Eventseiten">
+        <button class="page-button previous-page" type="button">← Zurück</button>
+        <span class="page-status" aria-live="polite">Seite 1</span>
+        <button class="page-button next-page" type="button">Nächste Events →</button>
+      </div>
+    </section>
+
+    <section class="benefits-section" id="vorteile">
+      <div class="benefit-intro">
+        <p class="eyebrow">Dein Sound. Deine Vorteile.</p>
+        <h2>Mehr als nur<br><em>ein Ticket.</em></h2>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit"><span>01</span><div><h3>Sicher &amp; unkompliziert</h3><p>Dein Ticket ist in wenigen Klicks bei dir.</p></div></div>
+        <div class="benefit"><span>02</span><div><h3>Beste Plätze zuerst</h3><p>Wir informieren dich, bevor es alle anderen wissen.</p></div></div>
+        <div class="benefit"><span>03</span><div><h3>Live-Momente teilen</h3><p>Konzerte machen gemeinsam noch mehr Spaß.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="feedback-area">
+    <div class="feedback-bubble">Sag uns alles, was du möchtest :-)!<span class="feedback-tail"></span></div>
+    <button class="contact-email" type="button">kontakt@sound.pass.com ↗</button>
+  </div>
+
+  <footer id="kontakt">
+    <a class="logo" href="#top">Sound<span>Pass</span></a>
+    <p>© 2026 SoundPass · Tickets für echte Momente.</p>
+    <a class="footer-link" href="mailto:kontakt@sound.pass.com">kontakt@sound.pass.com ↗</a>
+  </footer>
+
+  <div class="modal-backdrop" id="purchase-modal" hidden>
+    <div class="purchase-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="close-modal" type="button" aria-label="Dialog schließen">×</button>
+      <p class="eyebrow">Fast geschafft</p>
+      <h2 id="modal-title">Dein Ticket für<br><em id="selected-event">dein Event</em></h2>
+      <p class="modal-price">Preis ab <strong id="selected-price">49,90 €</strong></p>
+      <label for="ticket-count">Anzahl Tickets</label>
+      <select id="ticket-count">
+        <option value="1">1 Ticket</option>
+        <option value="2">2 Tickets</option>
+        <option value="3">3 Tickets</option>
+        <option value="4">4 Tickets</option>
+      </select>
+      <fieldset class="seat-picker">
+        <legend>Sitzplätze auswählen</legend>
+        <div class="seat-map" aria-label="Interaktiver Sitzplan"></div>
+        <p class="seat-help"><span class="seat-available"></span> frei <span class="seat-selected"></span> ausgewählt <span class="seat-unavailable"></span> belegt</p>
+      </fieldset>
+      <p class="reservation-note">Deine Plätze werden nach dem Hinzufügen 10 Minuten reserviert.</p>
+      <button class="primary-button modal-submit" type="button">In den Warenkorb <span>→</span></button>
+      <p class="modal-note">Demo-Seite: Es werden keine echten Zahlungen durchgeführt.</p>
+    </div>
+
+    <div class="modal-backdrop" id="checkout-modal" hidden>
+      <div class="purchase-modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+        <button class="close-modal checkout-close" type="button" aria-label="Checkout schließen">×</button>
+        <p class="eyebrow">Sicherer Checkout</p>
+        <h2 id="checkout-title">Deine <em>Bestellung.</em></h2>
+        <div class="checkout-timer" aria-live="polite">Reservierung läuft noch <strong id="checkout-countdown">10:00</strong></div>
+        <form id="checkout-form">
+          <label for="checkout-email">E-Mail für dein Ticket</label>
+          <input id="checkout-email" type="email" autocomplete="email" required placeholder="du@beispiel.at">
+          <label for="payment-method">Zahlungsmethode</label>
+          <select id="payment-method"><option>Kreditkarte (Demo)</option><option>PayPal (Demo)</option></select>
+          <button class="primary-button" type="submit">Zahlung bestätigen <span>→</span></button>
+        </form>
+        <p class="modal-note">Demo-Zahlung: Es werden keine echten Zahlungsdaten verarbeitet.</p>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="account-modal" hidden>
+      <div class="purchase-modal account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title">
+        <button class="close-modal account-close" type="button" aria-label="Konto schließen">×</button>
+        <p class="eyebrow">Dein SoundPass</p>
+        <h2 id="account-title">Mein <em>Konto.</em></h2>
+        <div class="account-summary"><strong>Gastkonto</strong><span>Tickets und Bestellungen werden hier lokal gespeichert.</span></div>
+        <h3>Bestellhistorie</h3>
+        <div id="order-history" class="order-history"><p class="empty-cart">Noch keine Bestellungen.</p></div>
+        <button class="primary-button account-close-action" type="button">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="details-modal" hidden>
+    <div class="purchase-modal details-modal" role="dialog" aria-modal="true" aria-labelledby="details-title">
+      <button class="close-modal details-close" type="button" aria-label="Details schließen">×</button>
+      <p class="eyebrow">Act-Details</p>
+      <h2 id="details-title"><em id="details-event">Neon Nights</em></h2>
+      <p id="details-copy">Ein energiegeladener Abend mit treibenden Gitarren, großen Melodien und einer spektakulären Lichtshow. Perfekt für alle, die Live-Musik ganz nah erleben möchten.</p>
+      <button class="primary-button details-buy" type="button">Tickets auswählen <span>→</span></button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="contact-modal" hidden>
+    <div class="purchase-modal contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <button class="close-modal contact-close" type="button" aria-label="Kontaktformular schließen">×</button>
+      <p class="eyebrow">Wir hören zu</p>
+      <h2 id="contact-title">Schreib uns <em>gerne.</em></h2>
+      <form id="contact-form">
+        <label for="contact-name">Vor &amp; Nachname *</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+        <label for="contact-email">E-Mail Adresse *</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" required>
+        <label for="contact-message">Deine Nachricht *</label>
+        <textarea id="contact-message" name="message" rows="4" required></textarea>
+        <label class="privacy-check">
+          <input name="privacy" type="checkbox" required>
+          <span>Ich akzeptiere die Datenschutzerklärung. *</span>
+        </label>
+        <button class="primary-button contact-submit" type="submit">Nachricht senden <span>→</span></button>
+      </form>
+      <p class="modal-note">Demo-Formular: Es wird keine Nachricht tatsächlich versendet.</p>
+    </div>
+  </div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb" aria-hidden="true">
+    <button class="close-modal cart-close" type="button" aria-label="Warenkorb schließen">×</button>
+    <p class="eyebrow">Deine Auswahl</p>
+    <h2>Warenkorb</h2>
+    <div id="cart-items"><p class="empty-cart">Noch keine Tickets ausgewählt.</p></div>
+    <div class="cart-reservation" aria-live="polite">Reservierung: <strong id="cart-countdown">10:00</strong></div>
+    <div class="cart-total"><span>Gesamt</span><strong id="cart-total">0,00 €</strong></div>
+    <button class="primary-button checkout-button" type="button">Zum Checkout <span>→</span></button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
